@@ -40,7 +40,8 @@ const styles = StyleSheet.create({
     backgroundColor: "grey",
     width: 100,
     height: 100,
-    flex: 1
+    flex: 1,
+    margin: 10
   }
 });
 
