@@ -15,7 +15,9 @@ import {
   Text,
   Button,
   StatusBar,
-  ToastAndroid
+  ToastAndroid,
+  TouchableOpacity,
+  Dimensions
 } from "react-native";
 
 import {
@@ -26,19 +28,16 @@ import {
   ReloadInstructions
 } from "react-native/Libraries/NewAppScreen";
 
-import Tombol from "./tombol";
+const { height, width } = Dimensions.get("screen") - 20;
 
-const Login = () => {
+const Tombol = ({ warna }) => {
   return (
     <View style={styles.margin}>
-      <Text>Hello</Text>
-      <View style={{ marginTop: 10 }}>
-        <Button
-          title={"Push"}
-          onPress={() => ToastAndroid.show("halooow", ToastAndroid.SHORT)}
-        />
-      </View>
-      <Tombol warna={"grey"} />
+      <TouchableOpacity onPress={() => alert()}>
+        <View style={styles.tombol}>
+          <Text style={{ color: warna }}>Haloo lagi</Text>
+        </View>
+      </TouchableOpacity>
     </View>
   );
 };
@@ -46,7 +45,15 @@ const Login = () => {
 const styles = StyleSheet.create({
   margin: {
     margin: 20
+  },
+  tombol: {
+    backgroundColor: "cyan",
+    width: width,
+    height: 40,
+    borderRadius: 5,
+    justifyContent: "center",
+    alignItems: "center"
   }
 });
 
-export default Login;
+export default Tombol;

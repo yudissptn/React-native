@@ -37,11 +37,7 @@ const App = () => {
 
 const styles = StyleSheet.create({
   background: {
-    backgroundColor: "grey",
-    width: 100,
-    height: 100,
-    flex: 1,
-    margin: 10
+    flex: 1
   }
 });
 
